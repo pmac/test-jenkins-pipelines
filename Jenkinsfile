@@ -3,7 +3,7 @@ switch ( env.BRANCH_NAME ) {
         echo "Building master"
         // build '../other-repo/master'
     case { it ==~ /^demo__\w/ }:
-        echo "Building a demo: ${it}"
+        echo "Building a demo: ${env.BRANCH_NAME}"
     default:
-        echo "Doing nothing for ${it}"
+        echo "Doing nothing for ${env.BRANCH_NAME}"
 }
